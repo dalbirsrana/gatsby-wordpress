@@ -1,8 +1,8 @@
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ data, siteTitle }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -27,6 +27,15 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+
+      <ul>
+      { 
+        data.allWordpressCategory.edges.map(( { node } ) => (
+          <div> { node.name } </div>
+          ))
+        }
+
+      </ul>
     </div>
   </header>
 )
@@ -38,5 +47,20 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: ``,
 }
+
+
+export const query = graphql`
+  {
+    allWordpressCategory(filter: {slug: {ne: "uncategorized"}}) {
+      edges {
+        node {
+          name
+          slug
+        }
+      }
+    }
+  }
+`
+
 
 export default Header

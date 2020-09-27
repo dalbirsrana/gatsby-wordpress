@@ -14,17 +14,35 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query wordpressAndSiteTitleQuery {
+      
       site {
         siteMetadata {
           title
         }
       }
+    
+      allWordpressCategory(filter: {slug: {ne: "uncategorized"}}) {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
     }
+
   `)
 
   return (
     <>
+      <header>
+          { 
+        data.allWordpressCategory.edges.map(( { node } ) => (
+          <div> { node.name } </div>
+          ))
+        }
+      </header>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -49,5 +67,22 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+
+
+// export const query = graphql`
+//   {    
+//     allWordpressCategory(filter: {slug: {ne: "uncategorized"}}) {
+//       edges {
+//         node {
+//           name
+//           slug
+//         }
+//       }
+//     }
+
+//   }
+// `
+
 
 export default Layout
