@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Dalbir Singh: Blog`,
-    description: `personal blog, dalbir Singh web developer`,
+    title: `Dalbir.me`,
+    description: `Hi, I am Front End web developer - CSS, React, Wordpress, E-commerce`,
     author: `@dalbirsrana`,
   },
   plugins: [
@@ -29,10 +29,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#FCA311`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

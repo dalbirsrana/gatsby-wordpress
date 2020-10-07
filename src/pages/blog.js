@@ -1,27 +1,24 @@
 import React from "react"
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 
 
-const IndexPage = ({ data }) => {
+const Blog = ({ data }) => {
   return (
     <Layout>
-      <SEO title="home" />
+      <SEO title="My Blog" />
       <h4>Posts</h4>
       {data.allWordpressPost.edges.map(({ node }) => (
         <div>
-          <Link to={node.slug}>
+          <Link to={`/post/${node.slug}`}>
             <p>{node.title}</p>
           </Link>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          <div dangerouslySetInnerHTML={{ 
+            __html: node.excerpt.replace('https://dalbir.wmdd.ca/', 'post/') 
+            }} />
         </div>
       ))}
-
-      <pre>
-        {JSON.stringify(data)}
-      </pre>
     </Layout>
   )
 }
@@ -37,17 +34,7 @@ export const query = graphql`
         }
       }
     }
-    
-    allWordpressCategory(filter: {slug: {ne: "uncategorized"}}) {
-      edges {
-        node {
-          name
-          slug
-        }
-      }
-    }
-
   }
 `
 
-export default IndexPage
+export default Blog

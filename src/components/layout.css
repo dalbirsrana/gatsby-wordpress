@@ -1,10 +1,11 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.5em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +20,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
 article,
 aside,
 details,
@@ -33,53 +35,58 @@ section,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
 }
+
 progress {
   vertical-align: baseline;
 }
+
 [hidden],
 template {
   display: none;
 }
+
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+
 a:active,
 a:hover {
   outline-width: 0;
 }
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
   text-decoration: none;
 }
+
 b,
 strong {
   font-weight: inherit;
   font-weight: bolder;
 }
+
 dfn {
   font-style: italic;
 }
+
 h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  padding: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -88,13 +95,16 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
 }
+
 mark {
   background-color: #ff0;
   color: #000;
 }
+
 small {
   font-size: 80%;
 }
+
 sub,
 sup {
   font-size: 75%;
@@ -102,12 +112,15 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
+
 img {
   border-style: none;
   max-width: 100%;
@@ -120,9 +133,11 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
+
 code,
 kbd,
 pre,
@@ -130,6 +145,7 @@ samp {
   font-family: monospace;
   font-size: 1em;
 }
+
 figure {
   margin-left: 0;
   margin-right: 0;
@@ -140,6 +156,7 @@ figure {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -155,6 +172,7 @@ hr {
   border: none;
   height: 1px;
 }
+
 button,
 input,
 optgroup,
@@ -163,17 +181,21 @@ textarea {
   font: inherit;
   margin: 0;
 }
+
 optgroup {
   font-weight: 700;
 }
+
 button,
 input {
   overflow: visible;
 }
+
 button,
 select {
   text-transform: none;
 }
+
 [type="reset"],
 [type="submit"],
 button,
@@ -250,32 +272,24 @@ textarea {
 *:after {
   box-sizing: inherit;
 }
+
 h2 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.6rem;
   line-height: 1.1;
 }
+
 h3 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -284,15 +298,11 @@ h3 {
   font-size: 1.38316rem;
   line-height: 1.1;
 }
+
 h4 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -301,108 +311,37 @@ h4 {
   font-size: 1rem;
   line-height: 1.1;
 }
+
 h5 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 0.9rem;
   line-height: 1.1;
 }
-h6 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
-}
-hgroup {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-ul {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
+
+ul,
 ol {
+  margin: 0;
   margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   list-style-position: outside;
   list-style-image: none;
 }
-dl {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
-dd {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 p {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
 }
 pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
@@ -412,20 +351,17 @@ pre {
   word-wrap: normal;
   padding: 1.45rem;
 }
+
 table {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  margin: 0;
   margin-bottom: 1.45rem;
+  padding: 0;
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
 }
+
 blockquote {
   margin-left: 1.45rem;
   margin-right: 1.45rem;
@@ -436,6 +372,7 @@ blockquote {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
+
 form {
   margin-left: 0;
   margin-right: 0;
@@ -593,5 +530,113 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+:root {
+  --color-black: #000000;
+  --color-blue: #14213d;
+  --color-orange: #FCA311;
+  --color-grey: #E5E5E5;
+  --color-white: #ffffff;
+}
+
+
+/* CSS website layout  */
+.site-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.site-header .menu-button::before {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: .5rem 0.15rem .3rem .15rem;
+  background-color: var(--color-grey);
+  border-radius: 0.25rem;
+  content: "\61";
+  font-family: "ElegantIcons";
+  font-size: 2.6rem;
+  z-index: 9;
+}
+
+.site-header.active + .site-content {
+  filter: blur(6px);
+}
+
+.menu-wrap {
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 8;
+  width: 100%;
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--color-white);
+  opacity: 0.88;
+
+  transform: translateX(-100vw);
+  transition: transform linear .3s;
+}
+
+.active .menu-wrap {
+  transform: translateX(0);
+  transition: transform linear .3s;
+}
+
+.site-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header nav li {
+  text-align: center;
+}
+
+.site-wrapper main {
+  margin: 1rem;
+  margin-top: 4rem;
+  min-height: 80vh;
+}
+
+
+
+/* css home page  */
+
+.home-page .hero-section {
+  min-height: 100vh;
+  margin: -4rem -1rem 0 -1rem;
+  padding: 4rem 1rem;
+  position: relative;
+  background-color: var(--color-black);
+  color: var(--color-orange);
+}
+
+.home-page .profile-pic {
+  background-image: url(../images/pattern-geometry.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-height: 70vh;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .home-page .profile-pic {
+    background-position: top right;
+    height: 70%;
   }
 }

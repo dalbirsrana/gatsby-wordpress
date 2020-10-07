@@ -1,66 +1,30 @@
-import { Link, graphql } from "gatsby"
-import PropTypes from "prop-types"
+import { Link } from "gatsby"
 import React from "react"
 
-const Header = ({ data, siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+const menuToggle = function () {
+  document.querySelector(".site-header").classList.toggle("active")
+}
+
+const Header = props => (
+  <header className="site-header">
+    <div className="menu-button" onClick={menuToggle}></div>
+    <div className="menu-wrap">
+      <h1>
+        <Link to="/">{props.siteTitle}</Link>
       </h1>
 
-      <ul>
-      { 
-        data.allWordpressCategory.edges.map(( { node } ) => (
-          <div> { node.name } </div>
-          ))
-        }
+      <nav>
+        <ul>
+          <li><Link to="/" onClick={menuToggle}>Home</Link></li>
+          <li><Link to="/about" onClick={menuToggle}>About</Link></li>
+          <li><Link to="/work" onClick={menuToggle}>Work</Link></li>
+          <li><Link to="/blog" onClick={menuToggle}>Blog</Link></li>
+          <li><Link to="/contact" onClick={menuToggle}>Contact</Link></li>
+        </ul>
+      </nav>
 
-      </ul>
     </div>
+    <div className="menu-back"></div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-
-export const query = graphql`
-  {
-    allWordpressCategory(filter: {slug: {ne: "uncategorized"}}) {
-      edges {
-        node {
-          name
-          slug
-        }
-      }
-    }
-  }
-`
-
-
 export default Header
